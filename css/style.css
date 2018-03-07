@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #748eba;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.list-view {
+    width: 280px;
+    height: 100vh;
+    float: left;
+    background: #000;
+    color: #bcbcbc;
+    position: absolute;
+    z-index: 2;
+}
+
+.list-view h3 {
+    padding: 15px;
+    transition: all 0.2s ease;
+}
+
+.list-view input[type="text"] {
+    padding: 8px 10px;
+    width: 220px;
+    margin: 0;
+    box-shadow: 0 0 5px 1px #4489ff;
+    outline: 1px;
+    border: solid 1px;
+}
+
+.list-view input[type="text"]:focus {
+    box-shadow: 0 0 5px 2px #4489ff;
+}
+
+.list-view label {
+    padding: 9px 12px;
+    margin: 0;
+    border: none;
+    background-image: linear-gradient(to bottom, #5E84C9, #46649C);
+    float: left;
+    color: #fff;
+    font-weight: 500;
+    box-shadow: 0 0 5px 0.01px #4489ff;
+}
+
+.list-view ul {
+    list-style-type: none;
+    padding: 10px 0;
+    overflow-y: auto;
+    height: 85%;
+}
+
+.list-view ul li {
+    padding: 15px;
+    cursor: pointer;
+}
+
+.list-view ul li:hover {
+    background-color: #363636;
+    color: #fff;
+}
+
+.map-view {
+    height: 100%;
+    margin-left: 280px;
+    transition: all 0.2s ease;
+}
+
+.header {
+    background-color: #262626;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+}
+
+.header h3 {
+    color: #e3e3e3;
+}
+
+.icon-container {
+    width: 40px;
+    height: 30px;
+    float: left;
+}
+
+.fa-bars {
+    color: #4489ff;
+    font-size: 25px;
+    float: left;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+#map {
+    height: 92%;
+}
+
+.hide-out {
+    animation: hide 0.2s ease forwards;
+}
+
+@keyframes hide {
+    from {
+        left: 0;
+    }
+    to {
+        left: -280px;
+    }
+}
+
+.show-up {
+    animation: show 0.2s ease;
+}
+
+@keyframes show {
+    from {
+        left: -280px;
+    }
+    to {
+        left: 0;
+    }
+}
